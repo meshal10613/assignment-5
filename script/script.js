@@ -16,6 +16,7 @@ const colors = ["#7096ff", "#c670ff", "#fa70ff", "#ff9170", "#a4ff70", "#F4F7FF"
 let index = 0;
 document.getElementById("theme-btn")
     .addEventListener("click", function(){
+        document.getElementById("theme-btn").style.rotate = "180";
         document.body.style.backgroundColor = colors[index];
         index++;
         if(index === colors.length){
@@ -35,7 +36,9 @@ document.getElementById("complete-1")
             const div = document.createElement("div");
             div.classList.add("bg-[#F4F7FF]", "m-4", "p-2", "rounded-lg")
             div.innerHTML = `
-                You have completed the task ${title} at ${dateTime}.
+                <p>
+                    You have completed the task ${title} at ${dateTime}.
+                </p>
             `;
             messageContainer.appendChild(div);
 
@@ -62,7 +65,9 @@ document.getElementById("complete-2")
             const div = document.createElement("div");
             div.classList.add("bg-[#F4F7FF]", "m-4", "p-2", "rounded-lg")
             div.innerHTML = `
-                You have completed the task ${title} at ${dateTime}.
+                <p>
+                    You have completed the task ${title} at ${dateTime}.
+                </p>
             `;
             messageContainer.appendChild(div);
 
@@ -89,7 +94,9 @@ document.getElementById("complete-3")
             const div = document.createElement("div");
             div.classList.add("bg-[#F4F7FF]", "m-4", "p-2", "rounded-lg")
             div.innerHTML = `
-                You have completed the task ${title} at ${dateTime}.
+                <p>
+                    You have completed the task ${title} at ${dateTime}.
+                </p>
             `;
             messageContainer.appendChild(div);
 
@@ -116,7 +123,9 @@ document.getElementById("complete-4")
             const div = document.createElement("div");
             div.classList.add("bg-[#F4F7FF]", "m-4", "p-2", "rounded-lg")
             div.innerHTML = `
-                You have completed the task ${title} at ${dateTime}.
+                <p>
+                    You have completed the task ${title} at ${dateTime}.
+                </p>
             `;
             messageContainer.appendChild(div);
 
@@ -143,7 +152,9 @@ document.getElementById("complete-5")
             const div = document.createElement("div");
             div.classList.add("bg-[#F4F7FF]", "m-4", "p-2", "rounded-lg")
             div.innerHTML = `
-                You have completed the task ${title} at ${dateTime}.
+                <p>
+                    You have completed the task ${title} at ${dateTime}.
+                </p>
             `;
             messageContainer.appendChild(div);
 
@@ -170,7 +181,9 @@ document.getElementById("complete-6")
             const div = document.createElement("div");
             div.classList.add("bg-[#F4F7FF]", "m-4", "p-2", "rounded-lg")
             div.innerHTML = `
-                You have completed the task ${title} at ${dateTime}.
+                <p>
+                    You have completed the task ${title} at ${dateTime}.
+                </p>
             `;
             messageContainer.appendChild(div);
 
@@ -182,5 +195,13 @@ document.getElementById("complete-6")
             const newBodyNumber = bodyNumber + 1;
             document.getElementById("body-number").innerText = newBodyNumber;
             document.getElementById("complete-6").disabled = true;
+        }
+    );
+
+//clear history btn
+document.getElementById("clear-history")
+    .addEventListener("click",
+        function(){
+            document.getElementById("message-container").innerText = " ";
         }
     );
