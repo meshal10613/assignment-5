@@ -16,7 +16,6 @@ const colors = ["#7096ff", "#c670ff", "#fa70ff", "#ff9170", "#a4ff70", "#F4F7FF"
 let index = 0;
 document.getElementById("theme-btn")
     .addEventListener("click", function(){
-        document.getElementById("theme-btn").style.rotate = "180";
         document.body.style.backgroundColor = colors[index];
         index++;
         if(index === colors.length){
@@ -29,6 +28,7 @@ document.getElementById("complete-1")
     .addEventListener("click",
         function(event){
             event.preventDefault();
+            alert("Board Updated Successfully");
             const title = document.getElementById("title-1").innerText;
             const now = new Date();
             const dateTime = now.toLocaleString();
@@ -47,7 +47,7 @@ document.getElementById("complete-1")
             document.getElementById("span-number").innerText = newSpanNumber;
 
             const bodyNumber = parseInt(document.getElementById("body-number").innerText);
-            const newBodyNumber = bodyNumber + 1;
+            const newBodyNumber = bodyNumber - 1;
             document.getElementById("body-number").innerText = newBodyNumber;
             document.getElementById("complete-1").disabled = true;
         }
@@ -58,6 +58,7 @@ document.getElementById("complete-2")
     .addEventListener("click",
         function(event){
             event.preventDefault();
+            alert("Board Updated Successfully");
             const title = document.getElementById("title-2").innerText;
             const now = new Date();
             const dateTime = now.toLocaleString();
@@ -76,7 +77,7 @@ document.getElementById("complete-2")
             document.getElementById("span-number").innerText = newSpanNumber;
 
             const bodyNumber = parseInt(document.getElementById("body-number").innerText);
-            const newBodyNumber = bodyNumber + 1;
+            const newBodyNumber = bodyNumber - 1;
             document.getElementById("body-number").innerText = newBodyNumber;
             document.getElementById("complete-2").disabled = true;
         }
@@ -87,6 +88,7 @@ document.getElementById("complete-3")
     .addEventListener("click",
         function(event){
             event.preventDefault();
+            alert("Board Updated Successfully");
             const title = document.getElementById("title-3").innerText;
             const now = new Date();
             const dateTime = now.toLocaleString();
@@ -105,7 +107,7 @@ document.getElementById("complete-3")
             document.getElementById("span-number").innerText = newSpanNumber;
 
             const bodyNumber = parseInt(document.getElementById("body-number").innerText);
-            const newBodyNumber = bodyNumber + 1;
+            const newBodyNumber = bodyNumber - 1;
             document.getElementById("body-number").innerText = newBodyNumber;
             document.getElementById("complete-3").disabled = true;
         }
@@ -116,6 +118,7 @@ document.getElementById("complete-4")
     .addEventListener("click",
         function(event){
             event.preventDefault();
+            alert("Board Updated Successfully");
             const title = document.getElementById("title-4").innerText;
             const now = new Date();
             const dateTime = now.toLocaleString();
@@ -134,7 +137,7 @@ document.getElementById("complete-4")
             document.getElementById("span-number").innerText = newSpanNumber;
 
             const bodyNumber = parseInt(document.getElementById("body-number").innerText);
-            const newBodyNumber = bodyNumber + 1;
+            const newBodyNumber = bodyNumber - 1;
             document.getElementById("body-number").innerText = newBodyNumber;
             document.getElementById("complete-4").disabled = true;
         }
@@ -145,6 +148,7 @@ document.getElementById("complete-5")
     .addEventListener("click",
         function(event){
             event.preventDefault();
+            alert("Board Updated Successfully");
             const title = document.getElementById("title-5").innerText;
             const now = new Date();
             const dateTime = now.toLocaleString();
@@ -163,7 +167,7 @@ document.getElementById("complete-5")
             document.getElementById("span-number").innerText = newSpanNumber;
 
             const bodyNumber = parseInt(document.getElementById("body-number").innerText);
-            const newBodyNumber = bodyNumber + 1;
+            const newBodyNumber = bodyNumber - 1;
             document.getElementById("body-number").innerText = newBodyNumber;
             document.getElementById("complete-5").disabled = true;
         }
@@ -174,6 +178,7 @@ document.getElementById("complete-6")
     .addEventListener("click",
         function(event){
             event.preventDefault();
+            alert("Board Updated Successfully");
             const title = document.getElementById("title-6").innerText;
             const now = new Date();
             const dateTime = now.toLocaleString();
@@ -188,11 +193,11 @@ document.getElementById("complete-6")
             messageContainer.appendChild(div);
 
             const spanNumber = parseInt(document.getElementById("span-number").innerText);
-            const newSpanNumber = spanNumber + 1;
+            const newSpanNumber = spanNumber - 1;
             document.getElementById("span-number").innerText = newSpanNumber;
 
             const bodyNumber = parseInt(document.getElementById("body-number").innerText);
-            const newBodyNumber = bodyNumber + 1;
+            const newBodyNumber = bodyNumber - 1;
             document.getElementById("body-number").innerText = newBodyNumber;
             document.getElementById("complete-6").disabled = true;
         }
@@ -205,3 +210,15 @@ document.getElementById("clear-history")
             document.getElementById("message-container").innerText = " ";
         }
     );
+
+
+//all task completed
+function allButtonClicked (){
+    alert("Congrates!! You have completed all the current task");
+}
+
+//day-date
+const now = new Date();
+const dateTime = now.toLocaleString();
+const onlyDate = dateTime.split(",")[0];
+document.getElementById("day-date").innerText = onlyDate;
