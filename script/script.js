@@ -23,6 +23,8 @@ document.getElementById("theme-btn")
         }
     });
 
+let sum = 0;
+
 // card-1
 document.getElementById("complete-1")
     .addEventListener("click",
@@ -213,12 +215,24 @@ document.getElementById("clear-history")
 
 
 //all task completed
-function allButtonClicked (){
-    alert("Congrates!! You have completed all the current task");
-}
+// document.querySelectorAll(".text-xs")
+//     .addEventListener("click",
+//         function(){
+//             alert("Congrates!! You have completed all the current task");
+//         }
+//     );
 
 //day-date
 const now = new Date();
-const dateTime = now.toLocaleString();
-const onlyDate = dateTime.split(",")[0];
-document.getElementById("day-date").innerText = onlyDate;
+const dateTime = now.toDateString().split(" ")[0];
+const dateTime2 = now.toDateString().split(" ")[1];
+const dateTime3 = now.toDateString().split(" ")[2];
+const dateTime4 = now.toDateString().split(" ")[3];
+// document.getElementById("day-date").innerText = dateTime;
+const dayDateContainer = document.getElementById("day-date");
+const div = document.createElement("div");
+div.innerHTML = `
+    <h1> ${dateTime}, </h1>
+    <h1 class = "font-semibold"> ${dateTime2} ${dateTime3} ${dateTime4} </h1>
+`;
+dayDateContainer.appendChild(div);
