@@ -23,187 +23,48 @@ document.getElementById("theme-btn")
         }
     });
 
-let sum = 0;
-
 // card-1
-document.getElementById("complete-1")
-    .addEventListener("click",
-        function(event){
-            event.preventDefault();
-            alert("Board Updated Successfully");
-            const title = document.getElementById("title-1").innerText;
-            const now = new Date();
-            const dateTime = now.toLocaleString();
-            const messageContainer = document.getElementById("message-container");
-            const div = document.createElement("div");
-            div.classList.add("bg-[#F4F7FF]", "m-4", "p-2", "rounded-lg")
-            div.innerHTML = `
-                <p>
-                    You have completed the task ${title} at ${dateTime}.
-                </p>
-            `;
-            messageContainer.appendChild(div);
+// document.getElementById("complete-1")
+//     .addEventListener("click",
+//         function(event){
+//             event.preventDefault();
+//             alert("Board Updated Successfully");
+//             const title = document.getElementById("title-1").innerText;
+//             const now = new Date();
+//             const dateTime = now.toLocaleString();
+//             const messageContainer = document.getElementById("message-container");
+//             const div = document.createElement("div");
+//             div.classList.add("bg-[#F4F7FF]", "m-4", "p-2", "rounded-lg")
+//             div.innerHTML = `
+//                 <p>
+//                     You have completed the task ${title} at ${dateTime}.
+//                 </p>
+//             `;
+//             messageContainer.appendChild(div);
 
-            const spanNumber = parseInt(document.getElementById("span-number").innerText);
-            const newSpanNumber = spanNumber + 1;
-            document.getElementById("span-number").innerText = newSpanNumber;
+//             const spanNumber = parseInt(document.getElementById("span-number").innerText);
+//             const newSpanNumber = spanNumber + 1;
+//             document.getElementById("span-number").innerText = newSpanNumber;
 
-            const bodyNumber = parseInt(document.getElementById("body-number").innerText);
-            const newBodyNumber = bodyNumber - 1;
-            document.getElementById("body-number").innerText = newBodyNumber;
-            document.getElementById("complete-1").disabled = true;
-        }
-    );
+//             const bodyNumber = parseInt(document.getElementById("body-number").innerText);
+//             const newBodyNumber = bodyNumber - 1;
+//             document.getElementById("body-number").innerText = newBodyNumber;
+//             document.getElementById("complete-1").disabled = true;
+//         }
+//     );
 
-// card-2
-document.getElementById("complete-2")
-    .addEventListener("click",
-        function(event){
-            event.preventDefault();
-            alert("Board Updated Successfully");
-            const title = document.getElementById("title-2").innerText;
-            const now = new Date();
-            const dateTime = now.toLocaleString();
-            const messageContainer = document.getElementById("message-container");
-            const div = document.createElement("div");
-            div.classList.add("bg-[#F4F7FF]", "m-4", "p-2", "rounded-lg")
-            div.innerHTML = `
-                <p>
-                    You have completed the task ${title} at ${dateTime}.
-                </p>
-            `;
-            messageContainer.appendChild(div);
-
-            const spanNumber = parseInt(document.getElementById("span-number").innerText);
-            const newSpanNumber = spanNumber + 1;
-            document.getElementById("span-number").innerText = newSpanNumber;
-
-            const bodyNumber = parseInt(document.getElementById("body-number").innerText);
-            const newBodyNumber = bodyNumber - 1;
-            document.getElementById("body-number").innerText = newBodyNumber;
-            document.getElementById("complete-2").disabled = true;
-        }
-    );
-
-// card-3
-document.getElementById("complete-3")
-    .addEventListener("click",
-        function(event){
-            event.preventDefault();
-            alert("Board Updated Successfully");
-            const title = document.getElementById("title-3").innerText;
-            const now = new Date();
-            const dateTime = now.toLocaleString();
-            const messageContainer = document.getElementById("message-container");
-            const div = document.createElement("div");
-            div.classList.add("bg-[#F4F7FF]", "m-4", "p-2", "rounded-lg")
-            div.innerHTML = `
-                <p>
-                    You have completed the task ${title} at ${dateTime}.
-                </p>
-            `;
-            messageContainer.appendChild(div);
-
-            const spanNumber = parseInt(document.getElementById("span-number").innerText);
-            const newSpanNumber = spanNumber + 1;
-            document.getElementById("span-number").innerText = newSpanNumber;
-
-            const bodyNumber = parseInt(document.getElementById("body-number").innerText);
-            const newBodyNumber = bodyNumber - 1;
-            document.getElementById("body-number").innerText = newBodyNumber;
-            document.getElementById("complete-3").disabled = true;
-        }
-    );
-
-// card-4
-document.getElementById("complete-4")
-    .addEventListener("click",
-        function(event){
-            event.preventDefault();
-            alert("Board Updated Successfully");
-            const title = document.getElementById("title-4").innerText;
-            const now = new Date();
-            const dateTime = now.toLocaleString();
-            const messageContainer = document.getElementById("message-container");
-            const div = document.createElement("div");
-            div.classList.add("bg-[#F4F7FF]", "m-4", "p-2", "rounded-lg")
-            div.innerHTML = `
-                <p>
-                    You have completed the task ${title} at ${dateTime}.
-                </p>
-            `;
-            messageContainer.appendChild(div);
-
-            const spanNumber = parseInt(document.getElementById("span-number").innerText);
-            const newSpanNumber = spanNumber + 1;
-            document.getElementById("span-number").innerText = newSpanNumber;
-
-            const bodyNumber = parseInt(document.getElementById("body-number").innerText);
-            const newBodyNumber = bodyNumber - 1;
-            document.getElementById("body-number").innerText = newBodyNumber;
-            document.getElementById("complete-4").disabled = true;
-        }
-    );
-
-// card-5
-document.getElementById("complete-5")
-    .addEventListener("click",
-        function(event){
-            event.preventDefault();
-            alert("Board Updated Successfully");
-            const title = document.getElementById("title-5").innerText;
-            const now = new Date();
-            const dateTime = now.toLocaleString();
-            const messageContainer = document.getElementById("message-container");
-            const div = document.createElement("div");
-            div.classList.add("bg-[#F4F7FF]", "m-4", "p-2", "rounded-lg")
-            div.innerHTML = `
-                <p>
-                    You have completed the task ${title} at ${dateTime}.
-                </p>
-            `;
-            messageContainer.appendChild(div);
-
-            const spanNumber = parseInt(document.getElementById("span-number").innerText);
-            const newSpanNumber = spanNumber + 1;
-            document.getElementById("span-number").innerText = newSpanNumber;
-
-            const bodyNumber = parseInt(document.getElementById("body-number").innerText);
-            const newBodyNumber = bodyNumber - 1;
-            document.getElementById("body-number").innerText = newBodyNumber;
-            document.getElementById("complete-5").disabled = true;
-        }
-    );
-
-// card-6
-document.getElementById("complete-6")
-    .addEventListener("click",
-        function(event){
-            event.preventDefault();
-            alert("Board Updated Successfully");
-            const title = document.getElementById("title-6").innerText;
-            const now = new Date();
-            const dateTime = now.toLocaleString();
-            const messageContainer = document.getElementById("message-container");
-            const div = document.createElement("div");
-            div.classList.add("bg-[#F4F7FF]", "m-4", "p-2", "rounded-lg")
-            div.innerHTML = `
-                <p>
-                    You have completed the task ${title} at ${dateTime}.
-                </p>
-            `;
-            messageContainer.appendChild(div);
-
-            const spanNumber = parseInt(document.getElementById("span-number").innerText);
-            const newSpanNumber = spanNumber - 1;
-            document.getElementById("span-number").innerText = newSpanNumber;
-
-            const bodyNumber = parseInt(document.getElementById("body-number").innerText);
-            const newBodyNumber = bodyNumber - 1;
-            document.getElementById("body-number").innerText = newBodyNumber;
-            document.getElementById("complete-6").disabled = true;
-        }
-    );
+//card-1
+btnClicked("complete-1", "title-1", "message-container", "span-number", "body-number");
+//card-2
+btnClicked("complete-2", "title-2", "message-container", "span-number", "body-number");
+//card-3
+btnClicked("complete-3", "title-3", "message-container", "span-number", "body-number");
+//card-4
+btnClicked("complete-4", "title-4", "message-container", "span-number", "body-number");
+//card-5
+btnClicked("complete-5", "title-5", "message-container", "span-number", "body-number");
+//card-6
+btnClicked("complete-6", "title-6", "message-container", "span-number", "body-number");
 
 //clear history btn
 document.getElementById("clear-history")
@@ -215,12 +76,8 @@ document.getElementById("clear-history")
 
 
 //all task completed
-// document.querySelectorAll(".text-xs")
-//     .addEventListener("click",
-//         function(){
-//             alert("Congrates!! You have completed all the current task");
-//         }
-//     );
+document.querySelectorAll(".text-xs");
+
 
 //day-date
 const now = new Date();
