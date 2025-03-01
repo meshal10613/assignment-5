@@ -88,10 +88,3 @@ div.innerHTML = `
     <h1 class = "font-semibold"> ${dateTime2} ${dateTime3} ${dateTime4} </h1>
 `;
 dayDateContainer.appendChild(div);
-
-//all task completed
-let count = document.getElementById("body-number").innerText;
-let counted = parseInt(count);
-if(counted === 0){
-    alert('congratulations! You have completed all the current task')
-};
