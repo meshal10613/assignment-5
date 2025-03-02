@@ -3,6 +3,8 @@ function btnClicked(btnName, titleName, msgCont, spanName, bodyName){
         .addEventListener("click",
             function(event){
                 event.preventDefault();
+                //individual alert
+                alert("Board Updated Successfully");
                 const title = document.getElementById(titleName).innerText;
                 const now = new Date();
                 const dateTime = now.toLocaleString();
@@ -30,8 +32,6 @@ function btnClicked(btnName, titleName, msgCont, spanName, bodyName){
                 if(counted === 0){
                     alert('congratulations! You have completed all the current task')
                 };
-                //individual alert
-                alert("Board Updated Successfully");
             }
         );
     };
